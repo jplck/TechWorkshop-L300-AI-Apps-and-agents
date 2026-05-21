@@ -32,6 +32,22 @@
             "cwd" : "${workspaceFolder}/src",
             
             "args": ["chat_app:app","--reload", "--port", "8000"]
+        },
+        {
+            "name": "Python: A2A Server",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/src/.venv/bin/python",
+            "program": "${workspaceFolder}/src/a2a/main.py",
+            "cwd": "${workspaceFolder}/src",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src/a2a",
+                "HOST": "127.0.0.1",
+                "PORT": "8001",
+                "DEBUG": "true"
+            },
+            "justMyCode": false
         }
     ]
 }
